@@ -18,7 +18,6 @@ export default function HomeScreen ({ navigation }: Props): JSX.Element {
     const response = await getSources()
     setSources(response)
   }, [])
-  console.log('error', error)
 
   useFocusEffect(useCallback(() => {
     setLoading(true)

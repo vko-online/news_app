@@ -20,7 +20,6 @@ export default function DetailsScreen ({ navigation, route }: Props): JSX.Elemen
   const [page, setPage] = useState(INITIAL_PAGE)
 
   const fetchData = useCallback(async (): Promise<void> => {
-    console.log('fetched')
     const response = await getArticles(route.params?.sourceId, { pageSize: PAGE_SIZE, page })
     setArticles(articles?.concat(response))
   }, [route.params?.sourceId, page])
